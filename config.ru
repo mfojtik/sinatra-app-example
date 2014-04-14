@@ -4,7 +4,7 @@ Bundler.require :default
 
 class MyApp < Sinatra::Base
   get '/' do
-    'Hello from Docker!'
+    'Hello from Docker! (v2)'
   end
 end
 
