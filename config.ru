@@ -4,7 +4,13 @@ Bundler.require :default
 
 class MyApp < Sinatra::Base
   get '/' do
-    'Hello from Docker!'
+    stream do |out|
+      out << "It's gonna be legen -\n"
+      sleep 0.5
+      out << " (wait for it) \n"
+      sleep 1
+      out << "- dary!\n"
+    end
   end
 end
 
